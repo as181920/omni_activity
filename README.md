@@ -1,24 +1,13 @@
 # OmniActivity
-Short description and motivation.
+通用用户活动记录(Rails engine)
 
 ## Usage
-How to use my plugin.
 
 ## Installation
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'omni_activity'
-```
-
-And then execute:
-```bash
-$ bundle
-```
-
-Or install it yourself as:
-```bash
-$ gem install omni_activity
+gem 'omni_activity', git: "git@github.com:as181920/omni_activity.git", branch: "master"
 ```
 
 ## Contributing
