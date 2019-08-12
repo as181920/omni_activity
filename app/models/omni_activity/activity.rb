@@ -10,6 +10,12 @@ module OmniActivity
 
     before_validation :auto_set_occurred_at, on: :create
 
+    def root
+      node = self
+      node = node.parent while node.parent
+      node
+    end
+
     private
       def auto_set_occurred_at
         self.occurred_at ||= Time.zone.now
