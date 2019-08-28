@@ -16,6 +16,15 @@ module OmniActivity
       node
     end
 
+    def nth_parent(n)
+      node = self
+      n.times do
+        node = node.parent
+        break node if node.nil?
+      end
+      node
+    end
+
     private
       def auto_set_occurred_at
         self.occurred_at ||= Time.zone.now
