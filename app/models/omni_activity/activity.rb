@@ -4,7 +4,7 @@ module OmniActivity
     belongs_to :target, polymorphic: true,  optional: true
 
     belongs_to :parent, class_name: "OmniActivity::Activity", foreign_key: :parent_id, optional: true
-    has_many :children, class_name: "OmniActivity::Activity", foreign_key: :parent_id, dependent: :destroy
+    has_many :children, class_name: "OmniActivity::Activity", foreign_key: :parent_id, dependent: nil
 
     validates_presence_of :name, :occurred_at
 
