@@ -3,6 +3,7 @@ zh-CN:
   omni_activity:
     engine: "通用行为库"
     search: "检索"
+    address: "地址"
   activerecord:
     models:
       omni_activity/activity: "操作记录"

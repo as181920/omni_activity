@@ -3,6 +3,7 @@ en:
   omni_activity:
     engine: "Omni activity"
     search: "Search"
+    address: "Address"
   activerecord:
     models:
       omni_activity/activity: "Activity"
