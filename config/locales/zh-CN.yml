@@ -1,0 +1,15 @@
+---
+zh-CN:
+  omni_activity:
+    engine: "通用行为库"
+    search: "检索"
+  activerecord:
+    models:
+      omni_activity/activity: "操作记录"
+    attributes:
+      omni_activity/activity:
+        id: "ID"
+        actor: "用户"
+        occurred_at: "操作时间"
+      omni_activity/activity/name:
+        DrawUniqueCodeReward: "码上抽奖"

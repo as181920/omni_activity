@@ -1,0 +1,15 @@
+---
+en:
+  omni_activity:
+    engine: "Omni activity"
+    search: "Search"
+  activerecord:
+    models:
+      omni_activity/activity: "Activity"
+    attributes:
+      omni_activity/activity:
+        id: "ID"
+        actor: "User"
+        occurred_at: "Occured at"
+      omni_activity/activity/name:
+        DrawUniqueCodeReward: "Draw reward"
