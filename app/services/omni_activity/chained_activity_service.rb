@@ -19,10 +19,10 @@ module OmniActivity
     private
       def matching_scope(base_scope, parent, options)
         join_sources = []
-        (options[:tracking_level].presence || DEFAULT_TRACKING_LEVELS).to_i.times.map{ |idx| Activity.arel_table.alias(get_activity_table_alias(idx)) }.each_cons(2).map.with_index do |(tp, tn), idx|
+        (options[:tracking_level].presence || DEFAULT_TRACKING_LEVELS).to_i.times.map { |idx| Activity.arel_table.alias(get_activity_table_alias(idx)) }.each_cons(2).map.with_index do |(tp, tn), idx|
           nth_parent = parent&.nth_parent(idx)
           if nth_parent.nil?
-            return base_scope.joins(join_sources).where(get_activity_table_alias(idx) => {parent_id: nil})
+            return base_scope.joins(join_sources).where(get_activity_table_alias(idx) => { parent_id: nil })
           else
             join_sources.push(
               tp.left.join(tn).on(
